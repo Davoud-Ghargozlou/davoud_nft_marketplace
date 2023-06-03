@@ -5,10 +5,17 @@ import images from '../assets/assets';
 import Button from './Button';
 
 const FooterLink = ({ heading, items }) => (
-  <div className='flex-1 justify-start items-start'>
-    <h3 className='font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10'>{heading}</h3>
+  <div className="flex-1 justify-start items-start">
+    <h3 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">
+      {heading}
+    </h3>
     {items.map((item, index) => (
-      <p key={index} className='font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3'>{item}</p>
+      <p
+        key={index}
+        className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3"
+      >
+        {item}
+      </p>
     ))}
   </div>
 );
@@ -50,9 +57,14 @@ const Footer = () => {
             heading="CryptoKet"
             items={['Explore', 'How it Works', 'Contact Us']}
           />
-           <FooterLink
+          <FooterLink
             heading="Support"
-            items={['Help Center', 'Terms of Service', 'Legal', 'Privacy Policy']}
+            items={[
+              'Help Center',
+              'Terms of Service',
+              'Legal',
+              'Privacy Policy',
+            ]}
           />
         </div>
       </div>
